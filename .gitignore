@@ -77,6 +77,18 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Jupyter outputs and temporary files
+*.ipynb_backup
+*.ipynb~
+.jupyter/
+
+# JupyterLab settings
+.jupyter-server-log.txt
+
+# Notebook execution artifacts
+*.nbconvert.ipynb
 
 # IPython
 profile_default/
@@ -205,3 +217,16 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Claude Code
+.claude/
+CLAUDE.md
