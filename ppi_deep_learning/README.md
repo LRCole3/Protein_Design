@@ -17,7 +17,7 @@ those failures visible.
 |---|---|---|---|---|---|
 | 01 | [Deep learning foundations](01_deep_learning_foundations.ipynb) | PyTorch MLP, gradient saliency, integrated gradients | Which residue pairs separate the two variants? | A classifier models p(y \| x) only; it cannot describe or generate conformations | available |
 | 02 | [Autoencoders → VAEs](02_autoencoders_and_VAEs.ipynb) | PCA, autoencoder, VAE, conditional VAE | What does the conformational landscape look like? Can we sample it? | Gaussian likelihood gives over-smoothed samples | available |
-| 03 | GANs | GAN, WGAN-GP, projection-discriminator cGAN | Can we generate sharp, realistic frames? | Unstable training, mode collapse, no likelihood | coming next |
+| 03 | [GANs](03_GANs.ipynb) | GAN, WGAN-GP, projection-discriminator cGAN | Can we generate sharp, realistic frames? | Unstable training, mode collapse, no likelihood | available |
 | 04 | Diffusion models | DDPM, v-prediction, DDIM, classifier-free guidance | Can we get quality *and* coverage with stable training? | Flat-vector MLPs ignore residue structure | coming next |
 | 05 | Attention & transformers | Multi-head attention, residue tokens, pair-biased cross-attention | Which residues talk to which partners? | Discriminative only | coming next |
 | 06 | Capstone: diffusion transformer | adaLN diffusion transformer, flow matching; map to ESM, AlphaFold 3, RFdiffusion | How do today's protein design models fit together? | — | coming next |
@@ -63,6 +63,7 @@ used automatically if present.
 ppi_deep_learning/
 ├── 01_deep_learning_foundations.ipynb
 ├── 02_autoencoders_and_VAEs.ipynb
+├── 03_GANs.ipynb
 ├── ppi_dl/
 │   ├── data.py       # download, 1/d transform, standardization, splits, residue maps
 │   ├── metrics.py    # shared generative-model scorecard
