@@ -19,7 +19,7 @@ those failures visible.
 | 02 | [Autoencoders → VAEs](02_autoencoders_and_VAEs.ipynb) | PCA, autoencoder, VAE, conditional VAE | What does the conformational landscape look like? Can we sample it? | Gaussian likelihood gives over-smoothed samples | available |
 | 03 | [GANs](03_GANs.ipynb) | GAN, WGAN-GP, projection-discriminator cGAN | Can we generate sharp, realistic frames? | Unstable training, mode collapse, no likelihood | available |
 | 04 | [Diffusion models](04_diffusion_models.ipynb) | DDPM, v-prediction, DDIM, classifier-free guidance | Can we get quality *and* coverage with stable training? | Flat-vector MLPs ignore residue structure | available |
-| 05 | Attention & transformers | Multi-head attention, residue tokens, pair-biased cross-attention | Which residues talk to which partners? | Discriminative only | coming next |
+| 05 | [Attention & transformers](05_attention_and_transformers.ipynb) | Multi-head attention, residue tokens, pair-biased cross-attention | Which residues talk to which partners? | Discriminative only | available |
 | 06 | Capstone: diffusion transformer | adaLN diffusion transformer, flow matching; map to ESM, AlphaFold 3, RFdiffusion | How do today's protein design models fit together? | — | coming next |
 
 ## What's different from the NIGMS module
@@ -65,6 +65,7 @@ ppi_deep_learning/
 ├── 02_autoencoders_and_VAEs.ipynb
 ├── 03_GANs.ipynb
 ├── 04_diffusion_models.ipynb
+├── 05_attention_and_transformers.ipynb
 ├── ppi_dl/
 │   ├── data.py       # download, 1/d transform, standardization, splits, residue maps
 │   ├── diffusion.py  # DDPM schedule, v-prediction training, DDIM sampler (NB04)
