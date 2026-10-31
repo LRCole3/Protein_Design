@@ -1,0 +1,4 @@
+# downloaded NIGMS data (fetched automatically by ppi_dl.download_data)
+data/
+# model checkpoints written by the notebooks
+checkpoints/
