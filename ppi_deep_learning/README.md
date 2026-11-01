@@ -20,7 +20,7 @@ those failures visible.
 | 03 | [GANs](03_GANs.ipynb) | GAN, WGAN-GP, projection-discriminator cGAN | Can we generate sharp, realistic frames? | Unstable training, mode collapse, no likelihood | available |
 | 04 | [Diffusion models](04_diffusion_models.ipynb) | DDPM, v-prediction, DDIM, classifier-free guidance | Can we get quality *and* coverage with stable training? | Flat-vector MLPs ignore residue structure | available |
 | 05 | [Attention & transformers](05_attention_and_transformers.ipynb) | Multi-head attention, residue tokens, pair-biased cross-attention | Which residues talk to which partners? | Discriminative only | available |
-| 06 | Capstone: diffusion transformer | adaLN diffusion transformer, flow matching; map to ESM, AlphaFold 3, RFdiffusion | How do today's protein design models fit together? | — | coming next |
+| 06 | [Capstone: diffusion transformer](06_capstone_diffusion_transformer.ipynb) | adaLN diffusion transformer, flow matching; map to ESM, AlphaFold 3, RFdiffusion | How do today's protein design models fit together? | — | available |
 
 ## What's different from the NIGMS module
 
@@ -36,6 +36,11 @@ those failures visible.
   to diffusion transformers.
 * **A data-loading fix.** The upstream Submodule 3 notebook loads `cov2_run2` from
   `cropped_cov1_run2.npy`. `ppi_dl.data` loads each run from its own file.
+* **Results reported as measured.** Several experiments did not come out as the narrative
+  first expected — a transformer that does not beat an MLP on a saturated task, attribution
+  methods that disagree at the level of individual residue pairs, a diffusion
+  parameterization that fails outright. Those outcomes are kept and explained, because
+  diagnosing them is the transferable skill.
 
 ## Getting started
 
@@ -66,13 +71,15 @@ ppi_deep_learning/
 ├── 03_GANs.ipynb
 ├── 04_diffusion_models.ipynb
 ├── 05_attention_and_transformers.ipynb
+├── 06_capstone_diffusion_transformer.ipynb
 ├── ppi_dl/
 │   ├── data.py       # download, 1/d transform, standardization, splits, residue maps
 │   ├── diffusion.py  # DDPM schedule, v-prediction training, DDIM sampler (NB04)
 │   ├── metrics.py    # shared generative-model scorecard
 │   └── plotting.py   # per-residue importance and sample-comparison plots
 ├── results/
-│   └── scorecard.csv # rows appended by each generative notebook
+│   ├── scorecard.csv        # rows appended by each generative notebook
+│   └── series_scorecard.csv # all models side by side (written by notebook 06)
 └── requirements.txt
 ```
 
