@@ -4,9 +4,11 @@ The data come from the NIGMS Sandbox module
 "Protein-Protein Interactions using ML"
 (https://github.com/NIGMS/Protein-Protein-Interactions-using-ML).
 
-Each MD frame is described by 4,886 distances (nm) between C-alpha atoms of an
-hACE2 residue and a viral receptor-binding-domain (RBD) residue that come within
-1.5 nm of each other at the interface. There are two independent 1,000-frame
+Each MD frame is described by 4,886 distances (nm) between an hACE2 residue and
+a viral receptor-binding-domain (RBD) residue that come within 1.5 nm of each
+other at the interface. (The upstream module does not state which atoms the
+distances are measured between; values reach 0.24 nm, too short for C-alpha
+contacts, so they are closest-atom distances.) There are two independent 1,000-frame
 runs per variant.
 
 Note: the upstream submodule 3 notebook loads ``cov2_run2`` from
